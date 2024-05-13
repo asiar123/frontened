@@ -32,7 +32,7 @@ const Register = () => {
   
     try {
       // Actualizar la URL de la API a la del servicio en Render
-      const response = await axios.post("https://backend-tm3m.onrender.com", formData);
+      const response = await axios.post("https://backend-tm3m.onrender.com/api/auth/register", formData);
       alert(`Usuario creado: ${response.data.nombre}`);
       navigate('/');  // Navegar al inicio o a la página de login tras el registro
     } catch (error) {
