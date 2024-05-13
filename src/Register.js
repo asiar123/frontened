@@ -6,7 +6,7 @@ import './register.css';
 const Register = () => {
   const [id_usuario, setIdUsuario] = useState("");
   const [nombre, setNombre] = useState("");
-  const [password, setpassword] = useState("");
+  const [password, setPassword] = useState("");
   const [foto, setFoto] = useState(null);
   const [tipo, setTipo] = useState('');  // Estado para el tipo
   const [error, setError] = useState("");
@@ -31,9 +31,10 @@ const Register = () => {
     }
   
     try {
-      const response = await axios.post("https://192.168.1.7:7000/api/auth/register", formData);
+      // Actualizar la URL de la API a la del servicio en Render
+      const response = await axios.post("https://backend-8jcr.onrender.com:10000/api/auth/register", formData);
       alert(`Usuario creado: ${response.data.nombre}`);
-      navigate('/');
+      navigate('/');  // Navegar al inicio o a la página de login tras el registro
     } catch (error) {
       const errorMessage = error.response ? error.response.data : "Error de red o respuesta no recibida";
       setError(errorMessage);
@@ -55,7 +56,7 @@ const Register = () => {
         </label>
         <label>
           Contraseña:
-          <input type="password" value={password} onChange={(e) => setpassword(e.target.value)} />
+          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </label>
         <label>
           Foto:
@@ -67,11 +68,11 @@ const Register = () => {
             <option value="">Seleccione un tipo</option>
             <option value="tipo1">Operadora</option>
             <option value="tipo2">Conductor</option>
-            <option value="tipo3"></option>
+            <option value="tipo3">Cliente</option>  // Asegúrate de que los valores coinciden con lo que tu backend espera
           </select>
         </label>
         <input type="submit" value="Registrarse" />
-        <Link to="/">¿Ya tienes cuenta? Inicia sesión</Link>
+        <Link to="/login">¿Ya tienes cuenta? Inicia sesión</Link>
       </form>
     </div>
   );
