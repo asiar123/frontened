@@ -4,10 +4,9 @@ function UserList() {
   const [users, setUsers] = useState([]); // Estado para almacenar los usuarios
 
   useEffect(() => {
-    // Función para obtener los usuarios del backend
     const fetchUsers = async () => {
       try {
-        const response = await fetch('https://192.168.1.7:7000/api/auth/users', {
+        const response = await fetch('https://backend-ocba.onrender.com/api/auth/users', { // Asegúrate de usar la URL correcta
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -23,16 +22,31 @@ function UserList() {
     };
 
     fetchUsers();
-  }, []); // El arreglo vacío asegura que este efecto se ejecute solo una vez
+  }, []);
 
   return (
-    <div>
-      <h1>Lista de Usuarios</h1>
-      <ul>
-        {users.map(user => (
-          <li key={user.id_usuario}>{user.nombre} - {user.email}</li> // Ajusta estos campos según tu modelo de usuario
-        ))}
-      </ul>
+    <div className="container mt-5">
+      <h1 className="mb-3">Lista de Conductores</h1>
+      <table className="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Tipo</th>
+          </tr>
+        </thead>
+        <tbody>
+          {users.map(user => (
+            <tr key={user.id_usuario}>
+              <td>{user.id_usuario}</td>
+              <td>{user.nombre}</td>
+              <td>{user.email}</td>
+              <td>{user.tipo}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
