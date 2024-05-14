@@ -13,7 +13,7 @@ function UserPage() {
             const id_usuario = localStorage.getItem('id_usuario');
             if (id_usuario) {
                 try {
-                    const response = await axios.get(`https://192.168.1.7:7000/api/auth/user/${id_usuario}`);
+                    const response = await axios.get(`https://backend-ocba.onrender.com/api/auth/user/${id_usuario}`);
                     if (response.data) {
                         setUser(prevState => ({
                             ...prevState,
