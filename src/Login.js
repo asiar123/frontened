@@ -25,7 +25,7 @@ const Login = () => {
   };
 
   try {
-    const response = await axios.post("https://192.168.1.7:7000/api/auth/login", payload);
+    const response = await axios.post("https://backend-ocba.onrender.com/api/auth/login", payload);
     alert(`Bienvenido ${response.data.nombre}`);
     localStorage.setItem("token", response.data.token);
     localStorage.setItem("id_usuario", id_usuario);
