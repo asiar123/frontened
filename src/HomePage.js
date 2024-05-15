@@ -12,6 +12,22 @@ const HomePage = () => {
     console.log('Socket conectado en HomePage:', socket.connected);
   }, []);
 
+   // Styles
+   const iconsContainerStyle = {
+    position: 'absolute',
+    top: '20px',
+    right: '20px',
+    display: 'flex',
+    alignItems: 'center',
+    zIndex: 1000 // Ensure icons are above the map
+  };
+
+  const iconLinkStyle = {
+    marginLeft: '10px', // Space between icons
+    color: 'black', // Icon color
+    fontSize: '24px' // Icon size
+  };
+
   return (
     <div className="container-fluid" style={{ height: '100vh' }}>
       <div className="row align-items-center" style={{ padding: '20px 0' }}>
