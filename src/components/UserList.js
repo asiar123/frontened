@@ -38,9 +38,6 @@ function UserList() {
   return (
     <div className="container mt-5">
       <h1 className="mb-3">Lista de Conductores</h1>
-      <Link to="/home" className="btn btn-secondary">
-        <FontAwesomeIcon icon={faArrowLeft} /> Regresar
-      </Link>
       <table className="table table-striped">
         <thead>
           <tr>
