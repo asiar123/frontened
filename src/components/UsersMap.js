@@ -12,7 +12,7 @@ const UsersMap = () => {
 
     useEffect(() => {
         // Inicializar Socket.IO
-        socket = io('https://backend-ocba.onrender.com/');
+        socket = io('https://backend-ocba.onrender.com');
 
         socket.on('connect', () => {
             console.log('Conexión Socket.IO establecida');
