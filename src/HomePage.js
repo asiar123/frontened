@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faUsers, faTaxi } from '@fortawesome/free-solid-svg-icons'; // Suponiendo que añades el icono de un taxi
+import { faUser, faUsers, faTaxi, globe } from '@fortawesome/free-solid-svg-icons'; // Suponiendo que añades el icono de un taxi
 import MapComponent from './components/MapComponent';
 import socket from './Socket';
 
@@ -43,6 +43,9 @@ const HomePage = () => {
           </Link>
           <Link to="/chat" style={iconLinkStyle} className="btn btn-success ml-2">
             <FontAwesomeIcon icon={faTaxi} />
+          </Link>
+          <Link to="/map" style={iconLinkStyle} className="btn btn-success ml-2">
+            <FontAwesomeIcon icon={globe} />
           </Link>
         </div>
       </div>
