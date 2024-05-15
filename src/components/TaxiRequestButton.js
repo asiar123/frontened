@@ -7,8 +7,8 @@ const TaxiRequestButton = () => {
       const taxiRequestData = {
         clientId: '3201823721',
         name: 'Fulano',
-        latitude: 1.217770601996459, // La latitud actual del cliente
-        longitude: -77.27922203367646, // La longitud actual del cliente
+        latitude: 1.216891, // La latitud actual del cliente
+        longitude: -77.289413, // La longitud actual del cliente
         address: 'Calle x',
         endLatitude: 1.2286228566102266, // la latitud de destino proporcionada por el cliente
         endLongitude: -77.28339116070457, // la longitud de destino proporcionada por el cliente
