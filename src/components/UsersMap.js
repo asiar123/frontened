@@ -61,7 +61,7 @@ const UsersMap = () => {
 
     const fetchUserLocations = async () => {
         try {
-            const response = await axios.get('https://192.168.1.7:7000/api/geolocation/users');
+            const response = await axios.get('https://backend-ocba.onrender.com/api/geolocation/users');
             updateMarkers(response.data);
         } catch (error) {
             console.error("Error fetching user locations: ", error);
