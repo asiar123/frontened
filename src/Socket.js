@@ -1,4 +1,4 @@
 // socket.js
 import io from 'socket.io-client';
-const socket = io('https://192.168.1.7:7000', { reconnection: true });
+const socket = io('https://frontened-s7n0.onrender.com', { reconnection: true });
 export default socket;
