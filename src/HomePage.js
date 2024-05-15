@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faUsers, faTaxi, globe } from '@fortawesome/free-solid-svg-icons'; // Suponiendo que añades el icono de un taxi
+import { faUser, faUsers, faTaxi, faGlobe } from '@fortawesome/free-solid-svg-icons';
 import MapComponent from './components/MapComponent';
 import socket from './Socket';
 
@@ -12,8 +12,8 @@ const HomePage = () => {
     console.log('Socket conectado en HomePage:', socket.connected);
   }, []);
 
-   // Styles
-   const iconsContainerStyle = {
+  // Styles
+  const iconsContainerStyle = {
     position: 'absolute',
     top: '20px',
     right: '20px',
@@ -45,8 +45,9 @@ const HomePage = () => {
             <FontAwesomeIcon icon={faTaxi} />
           </Link>
           <Link to="/map" style={iconLinkStyle} className="btn btn-success ml-2">
-            <FontAwesomeIcon icon={globe} />
+            <FontAwesomeIcon icon={faGlobe} />
           </Link>
+
         </div>
       </div>
       <div className="row">
