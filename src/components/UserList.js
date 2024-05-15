@@ -28,6 +28,13 @@ function UserList() {
     fetchUsers();
   }, []);
 
+  const backButtonStyle = {
+    position: 'absolute',
+    bottom: '20px',
+    right: '20px',
+    zIndex: 1000
+  };
+
   return (
     <div className="container mt-5">
       <h1 className="mb-3">Lista de Conductores</h1>
@@ -54,6 +61,11 @@ function UserList() {
           ))}
         </tbody>
       </table>
+      <div style={backButtonStyle} >
+        <Link to="/home" className="btn btn-secondary">
+          <FontAwesomeIcon icon={faArrowLeft} />
+        </Link>
+      </div>
     </div>
   );
 }
