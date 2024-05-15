@@ -62,7 +62,7 @@ const MapComponent = ({ id_usuario }) => {
 
   function sendLocationToServer(latitude, longitude) {
     const payload = { id_usuario, latitude, longitude };
-    axios.post('https://frontened-s7n0.onrender.com/api/geolocation/update-location', payload)
+    axios.post('https://backend-ocba.onrender.com/api/geolocation/update-location', payload)
       .then(response => {
         console.log("Respuesta del servidor:", response.data);
       })
