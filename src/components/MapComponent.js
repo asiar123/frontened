@@ -121,7 +121,7 @@ const MapComponent = ({ id_usuario }) => {
     };
   
     try {
-      const response = await axios.post('https://192.168.1.7:7000/api/geolocation/accept-taxi-request', acceptTaxiData);
+      const response = await axios.post('https://frontened-s7n0.onrender.com/api/geolocation/accept-taxi-request', acceptTaxiData);
       console.log('Respuesta de la aceptación del taxi:', response.data);
       setShowNotification(true); // Muestra la notificación de asignación
       setTimeout(() => {
