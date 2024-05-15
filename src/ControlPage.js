@@ -5,7 +5,7 @@ import TaxiRequestButton from './components/TaxiRequestButton';
 const HomePage = () => {
   return (
     <div>
-      <h1>Home Page Michael</h1>
+      <h1>Radio-taxis</h1>
       <TaxiRequestButton /> {/* Botón para solicitar el taxi */}
       <UsersMap /> {/* Componente para mostrar el mapa */}
     </div>
