@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+
 
 function UserPage() {
     const [user, setUser] = useState({
@@ -35,6 +39,13 @@ function UserPage() {
         fetchUserData();
     }, []);
 
+    const backButtonStyle = {
+        position: 'absolute',
+        bottom: '20px',
+        right: '20px',
+        zIndex: 1000
+    };
+
     return (
         <div style={{ maxWidth: '600px', margin: '20px auto', padding: '20px', border: '1px solid #ccc', borderRadius: '5px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', backgroundColor: '#fff' }}>
             <h1 style={{ textAlign: 'center', color: '#333' }}>Perfil del Conductor</h1>
@@ -46,6 +57,11 @@ function UserPage() {
             </div>
             <div style={{ textAlign: 'center', marginTop: '20px' }}>
                 {user.foto && <img src={user.foto} alt="Foto del usuario" style={{ width: '150px', height: '150px', borderRadius: '75px', objectFit: 'cover', marginBottom: '20px' }} />}
+            </div>
+            <div style={backButtonStyle}>
+                <Link to="/home" className="btn btn-secondary">
+                    <FontAwesomeIcon icon={faArrowLeft} size="lg" />
+                </Link>
             </div>
         </div>
     );

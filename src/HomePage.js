@@ -25,8 +25,8 @@ const HomePage = () => {
           <Link to="/users-list" className="btn btn-secondary ml-2">
             <FontAwesomeIcon icon={faUsers} size="lg" />
           </Link>
-          <Link to="/taxi-request" className="btn btn-success ml-2">
-            <FontAwesomeIcon icon={faTaxi} size="lg" />
+          <Link to="/chat" style={iconLinkStyle} className="btn btn-success ml-2">
+            <FontAwesomeIcon icon={faTaxi} />
           </Link>
         </div>
       </div>
