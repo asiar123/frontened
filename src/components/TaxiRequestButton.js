@@ -7,8 +7,8 @@ const TaxiRequestButton = () => {
       const taxiRequestData = {
         clientId: '3201823721',
         name: 'Fulano',
-        latitude: 1.216891, // La latitud actual del cliente
-        longitude: -77.289413, // La longitud actual del cliente
+        latitude: 1.2140487793376007, // La latitud actual del cliente
+        longitude: -77.2929046107412, // La longitud actual del cliente
         address: 'Calle x',
         endLatitude: 1.2286228566102266, // la latitud de destino proporcionada por el cliente
         endLongitude: -77.28339116070457, // la longitud de destino proporcionada por el cliente
@@ -16,7 +16,7 @@ const TaxiRequestButton = () => {
       };
   
       try {
-        const response = await axios.post('https://frontened-s7n0.onrender.com/api/geolocation/taxi-request', taxiRequestData);
+        const response = await axios.post('https://192.168.1.7:7000/api/geolocation/taxi-request', taxiRequestData);
 
         console.log('Respuesta de la solicitud de taxi:', response.data);
       } catch (error) {
